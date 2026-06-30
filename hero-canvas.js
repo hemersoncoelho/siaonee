@@ -8,7 +8,7 @@
 
   const FRAME_COUNT = 90;
   const FRAME_PATH  = (i) => `assets/hero-frames/frame_${String(i + 1).padStart(4, '0')}.webp`;
-  const PRIORITY_N  = 15;
+  const PRIORITY_N  = 22;
   const MAX_DPR     = 2;
   const SCRUB_SPEED = 1.5;
 
@@ -83,8 +83,23 @@
     }
   }
 
-  function tick() { render(); requestAnimationFrame(tick); }
+  let rafActive = true;
+  function tick() {
+    if (!rafActive) return;
+    render();
+    requestAnimationFrame(tick);
+  }
   requestAnimationFrame(tick);
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      rafActive = false;
+    } else {
+      rafActive = true;
+      needsRedraw = true;
+      requestAnimationFrame(tick);
+    }
+  });
 
   // ── Frame loading ────────────────────────────────────────────────────────
   function loadFrame(i) {
@@ -120,7 +135,7 @@
     const f0 = bitmaps[0] || imgs[0];
     if (f0) { drawCover(f0); lastDrawnIdx = 0; needsRedraw = false; }
 
-    const CONCURRENCY = 6;
+    const CONCURRENCY = 8;
     let qi = PRIORITY_N, active = 0;
     function pump() {
       while (active < CONCURRENCY && qi < FRAME_COUNT) {

@@ -4,13 +4,16 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Sia One — Arquitetura comercial inteligente</title>
+<meta name="robots" content="noindex, follow" />
+<link rel="canonical" href="https://siaone.ia.br/" />
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" />
-
-<!-- Tailwind via CDN (utility classes for the layout, plus inline overrides) -->
-<script src="https://cdn.tailwindcss.com"></script>
+<!-- Fontes: carregamento assíncrono para não bloquear o primeiro paint -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+<!-- Preload do primeiro frame do hero para reduzir latência inicial do canvas -->
+<link rel="preload" href="assets/hero-frames/frame_0001.webp" as="image" fetchpriority="high" />
 
 <!-- GSAP + ScrollTrigger -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -1734,10 +1737,10 @@
     </div>
     <div class="nav-cta-wrap">
       <a href="#" class="nav-links" style="display:flex; padding-right:4px;">Entrar</a>
-      <button class="nav-cta" onclick="document.querySelector('.btn-primary')?.click()">
+      <a href="https://wa.me/+5588998325848?text=Quero%20saber%20mais%20sobre%20a%20Arquitetura%20Comercial%20com%20IA" class="nav-cta" target="_blank" rel="noopener" style="text-decoration:none;">
         Agendar demo
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-      </button>
+      </a>
     </div>
   </div>
 </nav>
@@ -1779,10 +1782,10 @@
           </p>
 
           <div class="hero-actions" id="heroActions">
-            <button class="btn-primary" onclick="alert('Conecte ao formulário ou Calendly aqui.')">
+            <a href="https://wa.me/+5588998325848?text=Quero%20saber%20mais%20sobre%20a%20Arquitetura%20Comercial%20com%20IA" class="btn-primary" target="_blank" rel="noopener" style="text-decoration:none;">
               Agendar demonstração
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </button>
+            </a>
             <button class="btn-ghost">
               <span class="play-ring">
                 <svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
@@ -2141,7 +2144,7 @@
 
     <!-- LEFT: Visual / Image Panel -->
     <div class="about-visual about-reveal-left">
-      <img src="assets/about-visual.webp" alt="Sia One Plataforma" class="about-img-real" />
+      <img src="assets/about-visual.webp" alt="Sia One Plataforma" class="about-img-real" loading="lazy" decoding="async" width="1448" height="1086" />
       <div class="about-visual-bg"></div>
       <div class="about-visual-glow-1"></div>
       <div class="about-visual-glow-2"></div>
@@ -2191,7 +2194,7 @@
       </p>
 
       <!-- CTA -->
-      <a href="#" class="about-cta about-reveal arev-d4">
+      <a href="https://wa.me/+5588998325848?text=Quero%20saber%20mais%20sobre%20a%20Arquitetura%20Comercial%20com%20IA" class="about-cta about-reveal arev-d4" target="_blank" rel="noopener">
         Conhecer a plataforma
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M7 17L17 7"/><path d="M7 7h10v10"/>
@@ -2664,7 +2667,7 @@
 
       <!-- Card 1 · Serviços B2B -->
       <div class="cu-card cu-reveal" style="transition-delay:0.08s">
-        <img class="cu-card-img" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=900&auto=format&fit=crop" alt="Serviços B2B">
+        <img class="cu-card-img" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=900&auto=format&fit=crop" alt="Serviços B2B" loading="lazy" decoding="async">
         <div class="cu-card-overlay"></div>
         <div class="cu-card-glow" style="background:var(--purple)"></div>
         <div class="cu-card-badge">B2B</div>
@@ -2684,7 +2687,7 @@
 
       <!-- Card 2 · Imobiliárias -->
       <div class="cu-card cu-reveal" style="transition-delay:0.16s">
-        <img class="cu-card-img" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=900&auto=format&fit=crop" alt="Imobiliárias">
+        <img class="cu-card-img" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=900&auto=format&fit=crop" alt="Imobiliárias" loading="lazy" decoding="async">
         <div class="cu-card-overlay"></div>
         <div class="cu-card-glow" style="background:var(--cyan)"></div>
         <div class="cu-card-badge">IMÓVEIS</div>
@@ -2704,7 +2707,7 @@
 
       <!-- Card 3 · Clínicas e Saúde -->
       <div class="cu-card cu-reveal" style="transition-delay:0.24s">
-        <img class="cu-card-img" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=900&auto=format&fit=crop" alt="Clínicas e Saúde">
+        <img class="cu-card-img" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=900&auto=format&fit=crop" alt="Clínicas e Saúde" loading="lazy" decoding="async">
         <div class="cu-card-overlay"></div>
         <div class="cu-card-glow" style="background:var(--emerald)"></div>
         <div class="cu-card-badge">SAÚDE</div>
@@ -2724,7 +2727,7 @@
 
       <!-- Card 4 · Educação -->
       <div class="cu-card cu-reveal" style="transition-delay:0.12s">
-        <img class="cu-card-img" src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?q=80&w=900&auto=format&fit=crop" alt="Educação">
+        <img class="cu-card-img" src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?q=80&w=900&auto=format&fit=crop" alt="Educação" loading="lazy" decoding="async">
         <div class="cu-card-overlay"></div>
         <div class="cu-card-glow" style="background:var(--purple-lt)"></div>
         <div class="cu-card-badge">EDU</div>
@@ -2744,7 +2747,7 @@
 
       <!-- Card 5 · Franquias -->
       <div class="cu-card cu-reveal" style="transition-delay:0.20s">
-        <img class="cu-card-img" src="https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=900&auto=format&fit=crop" alt="Franquias">
+        <img class="cu-card-img" src="https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=900&auto=format&fit=crop" alt="Franquias" loading="lazy" decoding="async">
         <div class="cu-card-overlay"></div>
         <div class="cu-card-glow" style="background:var(--orange)"></div>
         <div class="cu-card-badge">FRANQUIA</div>
@@ -2764,7 +2767,7 @@
 
       <!-- Card 6 · Infoprodutores -->
       <div class="cu-card cu-reveal" style="transition-delay:0.28s">
-        <img class="cu-card-img" src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=900&auto=format&fit=crop" alt="Infoprodutores">
+        <img class="cu-card-img" src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=900&auto=format&fit=crop" alt="Infoprodutores" loading="lazy" decoding="async">
         <div class="cu-card-overlay"></div>
         <div class="cu-card-glow" style="background:var(--cyan)"></div>
         <div class="cu-card-badge">DIGITAL</div>
