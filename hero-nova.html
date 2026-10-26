@@ -2083,7 +2083,6 @@ a { text-decoration:none; color:inherit; }
   <div class="nav-links">
     <a href="#como-funciona" class="nav-link">Produto</a>
     <a href="#custo" class="nav-link">Resultados</a>
-    <a href="#precos" class="nav-link">Preços</a>
     <a href="/blog/" class="nav-link">Blog</a>
   </div>
   <div class="nav-btns">
@@ -3038,9 +3037,9 @@ const conv=[
   {dir:'out', text:'Olá! Vi o anúncio. Quero saber o preço.', t:'02:31'},
   {dir:'ai',  text:'Olá! 😊 Dependendo do perfil temos condições especiais. Qual o tamanho do time de vendas?', t:'02:31'},
   {dir:'out', text:'Somos 8 vendedores, segmento imobiliário.', t:'02:33'},
-  {dir:'ai',  text:'Perfeito! Para imobiliárias com até 10 vendedores: plano Growth R$890/mês. IA ilimitada + CRM + WhatsApp integrado. Posso mostrar um caso similar?', t:'02:33'},
-  {dir:'out', text:'Sim! E tem como testar grátis?', t:'02:34'},
-  {dir:'ai',  text:'14 dias grátis, sem cartão. Agendei sua demo para amanhã às 10h ✅', t:'02:34'},
+  {dir:'ai',  text:'Perfeito! O valor depende do volume de vocês. Primeiro a gente mede: quantos leads entram e quantos esfriam. Posso marcar o diagnóstico?', t:'02:33'},
+  {dir:'out', text:'Pode. Quanto tempo leva?', t:'02:34'},
+  {dir:'ai',  text:'30 minutos, gratuito. Agendei para amanhã às 10h ✅', t:'02:34'},
 ];
 const msgs=document.getElementById('msgs');
 let idx=0;
@@ -4314,19 +4313,32 @@ setInterval(()=>{
 </section>
 
 <!-- ══════════════════════════════════════════════
-     SECTION 09.5 — PREÇOS
+     SECTION 09.5 — INVESTIMENTO (o valor sai do diagnóstico)
 ══════════════════════════════════════════════ -->
-<section id="precos" style="position:relative;padding:72px 24px;background:var(--bg);text-align:center;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-  <div style="max-width:640px;margin:0 auto">
+<section id="investimento" style="position:relative;padding:72px 24px;background:var(--bg);text-align:center;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div style="max-width:720px;margin:0 auto">
     <div style="font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--emerald);margin-bottom:14px">Investimento</div>
-    <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:var(--text);margin:0 0 16px;line-height:1.2">Um plano para cada estágio da sua operação</h2>
-    <p style="color:var(--muted2);font-size:15px;line-height:1.6;margin:0 0 32px">Planos <strong style="color:var(--text)">Essencial</strong>, <strong style="color:var(--text)">Crescimento</strong> e <strong style="color:var(--text)">Sob medida</strong>, de acordo com seu volume de leads e canais.</p>
-    <div style="display:inline-flex;flex-direction:column;align-items:center;gap:6px;padding:28px 36px;border-radius:16px;border:1px solid var(--border);background:var(--surface)">
-      <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,4vw,2.4rem);font-weight:800;color:var(--text)">A partir de R$ 997<span style="font-size:.5em;color:var(--muted2);font-weight:600">/mês</span></div>
-      <div style="font-size:13px;color:var(--muted)">mais implantação · valor final depende do escopo</div>
+    <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:var(--text);margin:0 0 16px;line-height:1.2">O valor sai do diagnóstico</h2>
+    <p style="color:var(--muted2);font-size:15px;line-height:1.6;margin:0 0 32px">Antes de falar em preço, a gente mede. Cada operação tem um volume e um vazamento diferente — o valor depende do que o diagnóstico mostrar.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;text-align:left">
+      <div style="padding:22px 20px;border-radius:16px;border:1px solid var(--border);background:var(--surface)">
+        <div style="font-family:ui-monospace,monospace;font-size:12px;font-weight:700;color:var(--emerald);margin-bottom:10px">01</div>
+        <div style="font-weight:700;color:var(--text);margin-bottom:6px">Diagnóstico gratuito</div>
+        <div style="font-size:13.5px;line-height:1.5;color:var(--muted2)">30 minutos de conversa sobre como o seu comercial funciona hoje.</div>
+      </div>
+      <div style="padding:22px 20px;border-radius:16px;border:1px solid var(--border);background:var(--surface)">
+        <div style="font-family:ui-monospace,monospace;font-size:12px;font-weight:700;color:var(--emerald);margin-bottom:10px">02</div>
+        <div style="font-weight:700;color:var(--text);margin-bottom:6px">O número na mão</div>
+        <div style="font-size:13.5px;line-height:1.5;color:var(--muted2)">Quantos leads entram, quantos esfriam e onde está o vazamento.</div>
+      </div>
+      <div style="padding:22px 20px;border-radius:16px;border:1px solid var(--border);background:var(--surface)">
+        <div style="font-family:ui-monospace,monospace;font-size:12px;font-weight:700;color:var(--emerald);margin-bottom:10px">03</div>
+        <div style="font-weight:700;color:var(--text);margin-bottom:6px">Proposta depois</div>
+        <div style="font-size:13.5px;line-height:1.5;color:var(--muted2)">Com escopo fechado. Você decide com o diagnóstico em mãos.</div>
+      </div>
     </div>
     <div style="margin-top:32px">
-      <a href="https://wa.me/5588998325848?text=Quero%20saber%20sobre%20os%20planos%20e%20pre%C3%A7os%20da%20Sia%20One" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;background:var(--emerald);color:#052e21;font-weight:700;font-size:14.5px;text-decoration:none">Falar sobre o plano ideal →</a>
+      <a href="https://wa.me/5588998325848?text=Quero%20pedir%20o%20diagn%C3%B3stico%20da%20minha%20opera%C3%A7%C3%A3o%20comercial" data-local="investimento" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;background:var(--emerald);color:#052e21;font-weight:700;font-size:14.5px;text-decoration:none">Pedir o diagnóstico →</a>
     </div>
   </div>
 </section>
@@ -4536,8 +4548,8 @@ setInterval(()=>{
         </div>
         <div class="faq10-a"><div class="faq10-a-inner">
           <div class="faq10-divider"></div>
-          <p class="fa10-text">A conta mostra o inverso. Com 50 leads/semana, conversão de 15% e ticket de R$&nbsp;1.500 — <em>cada ponto percentual de melhoria na conversão</em> vale <span class="fa10-stat"><span class="fa10-stat-dot"></span>R$ 4.680/mês</span>. Se o Sia One recuperar apenas <strong>2 clientes a mais por mês</strong>, ele já se paga. O restante vira lucro direto.</p>
-          <div class="fa10-insight"><span class="fa10-insight-icon">⚖️</span><div class="fa10-insight-text"><strong>ROI médio dos clientes:</strong> retorno positivo em menos de 30 dias. Apresentamos a conta com os números reais do seu negócio no diagnóstico gratuito.</div></div>
+          <p class="fa10-text">O valor só sai depois do diagnóstico, com <strong>escopo fechado</strong>. Antes disso, a gente mede <em>quanto o seu comercial deixa escapar hoje</em> — é esse número que diz se vale a pena, não uma tabela de preço.</p>
+          <div class="fa10-insight"><span class="fa10-insight-icon">⚖️</span><div class="fa10-insight-text"><strong>Diagnóstico gratuito de 30 minutos.</strong> A conta é feita com os números do seu negócio. Proposta só depois, se fizer sentido.</div></div>
         </div></div>
       </div>
 
@@ -4920,7 +4932,6 @@ setInterval(()=>{
       <div class="footer-col-title">Produto</div>
       <div class="footer-col-links">
         <a href="#como-funciona" class="footer-col-link">Como funciona</a>
-        <a href="#precos" class="footer-col-link">Planos e preços</a>
         <a href="/blog/" class="footer-col-link">Novidades</a>
       </div>
     </div>
