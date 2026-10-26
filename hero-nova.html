@@ -2263,8 +2263,9 @@ a { text-decoration:none; color:inherit; }
 
     <!-- subtext -->
     <p class="cost-sub" id="costSub">
-      Cada minuto de demora no WhatsApp é um lead que esfria — e vai fechar com o concorrente.
-      Os dados abaixo não são estimativas. São o custo real da operação manual.
+      Cada minuto de demora no WhatsApp é um lead que esfria.
+      Os dois primeiros números vêm de estudos publicados — a fonte está no cartão.
+      O terceiro é um cenário calculado, com as premissas à vista.
     </p>
 
     <!-- ── CARDS ── -->
@@ -2281,13 +2282,13 @@ a { text-decoration:none; color:inherit; }
           <span class="cost-num" data-target="78" data-fmt="pct">0%</span>
         </div>
 
-        <p class="cost-lbl">dos compradores fecham com quem responder <strong>primeiro</strong> — não com quem oferece mais barato</p>
+        <p class="cost-lbl">dos compradores fecham com a empresa que responde <strong>primeiro</strong></p>
 
         <div class="cost-bar">
           <div class="cost-bar-fill" style="background:var(--cyan)" data-w="78"></div>
         </div>
 
-        <span class="cost-src">Harvard Business Review</span>
+        <span class="cost-src">Estudo publicado · Lead Connect, pesquisa com compradores</span>
       </div>
 
       <!-- Card 2: 5 min -->
@@ -2311,31 +2312,34 @@ a { text-decoration:none; color:inherit; }
           </svg>
           <div class="cost-ring-lbl">
             <b>5 minutos</b>
-            depois disso, a chance de contato cai 10×
+            nessa janela, a chance de qualificar é 21× maior que em 30 min
           </div>
         </div>
 
-        <span class="cost-src">Lead Response Management Study</span>
+        <span class="cost-src">Estudo publicado · cerca de 15 mil leads, HBR, 2011</span>
       </div>
 
-      <!-- Card 3: R$ 8.400 — AMBER -->
+      <!-- Card 3: cenário calculado — AMBER -->
       <div class="cost-card cost-card-amb" data-cdelay="320">
         <div class="sweep"></div>
-        <div class="cost-ghost">8K</div>
+        <div class="cost-ghost">9K</div>
 
         <div class="cost-ico cost-ico-amb">💸</div>
 
         <div class="cost-stat">
           <span class="cost-prefix">R$</span>
-          <span class="cost-num cost-num-amb" data-target="8400" data-fmt="brl">0</span>
+          <span class="cost-num cost-num-amb" data-target="9000" data-fmt="brl">0</span>
         </div>
-        <div class="cost-period">potencialmente perdido por mês, neste cenário</div>
+        <div class="cost-period">por mês, neste cenário hipotético</div>
 
-        <p class="cost-lbl">por uma empresa com 50 leads/semana — só pela <strong>demora no atendimento</strong></p>
+        <p class="cost-lbl">é o que uma empresa com estas premissas deixaria de vender só pela <strong>demora no atendimento</strong></p>
 
         <div class="cost-calc">
-          <div class="cost-calc-row"><span>50 leads/sem</span><span>×</span><span class="cc-val">R$ 1.500</span><span>ticket médio</span></div>
-          <div class="cost-calc-row"><span>×</span><span class="cc-val">15%</span><span>conversão perdida por demora</span></div>
+          <div class="cost-calc-row"><span class="cc-val">200</span><span>leads por mês (≈ 50 por semana)</span></div>
+          <div class="cost-calc-row"><span>×</span><span class="cc-val">20%</span><span>esfriam pela demora</span></div>
+          <div class="cost-calc-row"><span>×</span><span class="cc-val">15%</span><span>conversão</span></div>
+          <div class="cost-calc-row"><span>×</span><span class="cc-val">R$ 1.500</span><span>ticket médio</span></div>
+          <div class="cost-calc-row"><span>=</span><span class="cc-val">6 vendas</span><span>× R$ 1.500 = R$ 9.000</span></div>
         </div>
 
         <div class="drain-row" id="drainRow">
@@ -2348,7 +2352,7 @@ a { text-decoration:none; color:inherit; }
           <div class="drain-coin" style="animation-delay:1.5s"></div>
         </div>
 
-        <span class="cost-src cost-src-amb">cálculo com médias de mercado</span>
+        <span class="cost-src cost-src-amb">Cenário calculado · premissas hipotéticas, não é dado de cliente</span>
       </div>
 
     </div><!-- /.cost-grid -->
