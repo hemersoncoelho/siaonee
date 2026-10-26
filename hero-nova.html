@@ -392,6 +392,13 @@ a { text-decoration:none; color:inherit; }
 .ss { padding:14px 16px; background:var(--surface); border:1px solid var(--border); border-radius:14px; width:98px; box-shadow:0 8px 28px rgba(0,0,0,.5); opacity:0; animation:reveal-up .6s var(--ease) both; }
 .ss-n { font-size:21px; font-weight:800; letter-spacing:-.03em; line-height:1; margin-bottom:4px; font-variant-numeric:tabular-nums; }
 .ss-l { font-family:ui-monospace,monospace; font-size:7.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); line-height:1.35; }
+.ss-src { width:98px; font-size:8.5px; line-height:1.4; color:var(--muted); opacity:0; animation:reveal-up .6s var(--ease) 1.8s both; }
+
+.hero-facts { display:none; flex-wrap:wrap; gap:10px; margin-top:28px; opacity:0; animation:reveal-up .7s var(--ease) 1.3s both; }
+.hf { flex:1 1 0; min-width:0; padding:12px 14px; background:var(--surface); border:1px solid var(--border); border-radius:14px; }
+.hf b { display:block; font-size:20px; font-weight:800; letter-spacing:-.03em; line-height:1; margin-bottom:6px; }
+.hf span { display:block; font-size:11px; line-height:1.35; color:var(--muted2); }
+.hf-src { flex-basis:100%; font-size:11px; color:var(--muted); }
 
 /* LOGO BELT */
 @keyframes belt-scroll {
@@ -445,7 +452,7 @@ a { text-decoration:none; color:inherit; }
 }
 
 /* RESPONSIVE */
-@media(max-width:1100px) { .side-stats { display:none; } }
+@media(max-width:1100px) { .side-stats { display:none; } .hero-facts { display:flex; } }
 @media(max-width:900px)  {
   .hero-inner { grid-template-columns:1fr; gap:48px; }
   .hero-visual { display:none; }
@@ -2126,6 +2133,14 @@ a { text-decoration:none; color:inherit; }
         </div>
         <div class="proof-txt"><strong>2 operações no ar no Cariri</strong><br>escola e fardamento</div>
       </div>
+
+      <!-- mesmos dados das side-stats, visíveis quando o visual do hero some -->
+      <div class="hero-facts">
+        <div class="hf"><b style="color:#D9584C">5 min</b><span>janela antes do lead esfriar</span></div>
+        <div class="hf"><b style="color:var(--cyan)">21×</b><span>mais chance de qualificar nessa janela</span></div>
+        <div class="hf"><b style="color:var(--emerald)">24h</b><span>cobertura do atendimento</span></div>
+        <p class="hf-src">5 min e 21×: estudo com cerca de 15 mil leads, HBR, 2011.</p>
+      </div>
     </div>
 
     <!-- VISUAL RIGHT -->
@@ -2133,17 +2148,18 @@ a { text-decoration:none; color:inherit; }
 
       <div class="side-stats">
         <div class="ss" style="animation-delay:1.2s">
-          <div class="ss-n" style="color:var(--cyan)" id="statLeads">47</div>
-          <div class="ss-l">leads respondidos hoje</div>
+          <div class="ss-n" style="color:#D9584C">5 min</div>
+          <div class="ss-l">janela antes do lead esfriar</div>
         </div>
         <div class="ss" style="animation-delay:1.4s">
-          <div class="ss-n" style="color:var(--emerald)">30s</div>
-          <div class="ss-l">resposta média IA</div>
+          <div class="ss-n" style="color:var(--cyan)">21×</div>
+          <div class="ss-l">mais chance de qualificar nessa janela</div>
         </div>
         <div class="ss" style="animation-delay:1.6s">
-          <div class="ss-n" style="color:var(--pink)">51%</div>
-          <div class="ss-l">taxa conversão</div>
+          <div class="ss-n" style="color:var(--emerald)">24h</div>
+          <div class="ss-l">cobertura do atendimento</div>
         </div>
+        <p class="ss-src">5 min e 21×: estudo com cerca de 15 mil leads, HBR, 2011.</p>
       </div>
 
       <div class="time-badge">
