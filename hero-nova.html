@@ -443,6 +443,8 @@ a { text-decoration:none; color:inherit; }
   transition:opacity .35s var(--ease), filter .35s var(--ease);
   pointer-events:none; user-select:none; display:block;
 }
+/* PNG com fundo branco opaco: inverte em vez de chapar em branco */
+.belt-item img.belt-opaque, .belt-item:hover img.belt-opaque { filter:invert(1); mix-blend-mode:screen; }
 .belt-item:hover img {
   opacity:0.88;
   filter:brightness(0) invert(1) drop-shadow(0 0 10px rgba(25,202,223,.42));
@@ -2239,31 +2241,32 @@ a { text-decoration:none; color:inherit; }
 
 <!-- LOGO BELT -->
 <div class="logo-belt">
+  <div class="belt-label">Modelos de IA usados na operação</div>
   <div class="belt-track">
-    <div class="belt-item"><img src="assets/image.png" alt="OpenAI" loading="lazy" decoding="async"></div>
+    <div class="belt-item"><img src="assets/image.png" alt="integração OpenAI" class="belt-opaque" loading="lazy" decoding="async"></div>
     <div class="belt-div"></div>
-    <div class="belt-item"><img src="assets/image%20copy.png" alt="Claude" loading="lazy" decoding="async"></div>
+    <div class="belt-item"><img src="assets/image%20copy.png" alt="integração Claude (Anthropic)" loading="lazy" decoding="async"></div>
     <div class="belt-div"></div>
-    <div class="belt-item"><img src="assets/image%20copy%202.png" alt="Gemini" loading="lazy" decoding="async"></div>
+    <div class="belt-item"><img src="assets/image%20copy%202.png" alt="integração Gemini (Google)" loading="lazy" decoding="async"></div>
     <div class="belt-div"></div>
-    <div class="belt-item"><img src="assets/image.png" alt="OpenAI" loading="lazy" decoding="async"></div>
+    <div class="belt-item"><img src="assets/image.png" alt="integração OpenAI" class="belt-opaque" loading="lazy" decoding="async"></div>
     <div class="belt-div"></div>
-    <div class="belt-item"><img src="assets/image%20copy.png" alt="Claude" loading="lazy" decoding="async"></div>
+    <div class="belt-item"><img src="assets/image%20copy.png" alt="integração Claude (Anthropic)" loading="lazy" decoding="async"></div>
     <div class="belt-div"></div>
-    <div class="belt-item"><img src="assets/image%20copy%202.png" alt="Gemini" loading="lazy" decoding="async"></div>
+    <div class="belt-item"><img src="assets/image%20copy%202.png" alt="integração Gemini (Google)" loading="lazy" decoding="async"></div>
     <div class="belt-div"></div>
     <!-- duplicate set for seamless infinite loop -->
-    <div class="belt-item"><img src="assets/image.png" alt="OpenAI" loading="lazy" decoding="async"></div>
+    <div class="belt-item"><img src="assets/image.png" alt="integração OpenAI" class="belt-opaque" loading="lazy" decoding="async"></div>
     <div class="belt-div"></div>
-    <div class="belt-item"><img src="assets/image%20copy.png" alt="Claude" loading="lazy" decoding="async"></div>
+    <div class="belt-item"><img src="assets/image%20copy.png" alt="integração Claude (Anthropic)" loading="lazy" decoding="async"></div>
     <div class="belt-div"></div>
-    <div class="belt-item"><img src="assets/image%20copy%202.png" alt="Gemini" loading="lazy" decoding="async"></div>
+    <div class="belt-item"><img src="assets/image%20copy%202.png" alt="integração Gemini (Google)" loading="lazy" decoding="async"></div>
     <div class="belt-div"></div>
-    <div class="belt-item"><img src="assets/image.png" alt="OpenAI" loading="lazy" decoding="async"></div>
+    <div class="belt-item"><img src="assets/image.png" alt="integração OpenAI" class="belt-opaque" loading="lazy" decoding="async"></div>
     <div class="belt-div"></div>
-    <div class="belt-item"><img src="assets/image%20copy.png" alt="Claude" loading="lazy" decoding="async"></div>
+    <div class="belt-item"><img src="assets/image%20copy.png" alt="integração Claude (Anthropic)" loading="lazy" decoding="async"></div>
     <div class="belt-div"></div>
-    <div class="belt-item"><img src="assets/image%20copy%202.png" alt="Gemini" loading="lazy" decoding="async"></div>
+    <div class="belt-item"><img src="assets/image%20copy%202.png" alt="integração Gemini (Google)" loading="lazy" decoding="async"></div>
     <div class="belt-div"></div>
   </div>
 </div>
@@ -4542,7 +4545,7 @@ setInterval(()=>{
         <div class="faq10-a"><div class="faq10-a-inner">
           <div class="faq10-divider"></div>
           <p class="fa10-text">Não é sobre trocar ferramenta. É sobre <strong>montar a operação</strong>. A Sia One integra com o que você já usa — RD Station, HubSpot, Pipedrive, Google Agenda, Calendly ou planilha. Se já tem CRM rodando, <em>a IA entra como camada de atendimento</em> e alimenta seu funil automaticamente, sem duplicidade nem perda de histórico.</p>
-          <div class="fa10-insight"><span class="fa10-insight-icon"><svg class="ico" aria-hidden="true"><use href="#i-link"/></svg></span><div class="fa10-insight-text"><strong>Integrações nativas:</strong> WhatsApp Business API, Google Agenda, Calendly e API aberta para qualquer CRM. Os dados do seu funil atual são migrados durante a implementação.</div></div>
+          <div class="fa10-insight"><span class="fa10-insight-icon"><svg class="ico" aria-hidden="true"><use href="#i-link"/></svg></span><div class="fa10-insight-text"><strong>Integrações:</strong> WhatsApp (via provedor terceirizado), Google Agenda, Calendly e API aberta para qualquer CRM. Os dados do seu funil atual são migrados durante a implementação.</div></div>
         </div></div>
       </div>
 
